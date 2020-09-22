@@ -1,29 +1,28 @@
-  public Node insertAtBeginning(Node first,int data){
+    public Node insertAtBeginning(Node first,int data){
         Node newNode=new Node(data);
-        if(first==null)   // if the node is null then return  newnode only
+        if(first==null)
             return newNode;
-        newNode.next=first;   // else point the newNode.next to first node
-        first=newNode;         //move the pointer of first node to newNode
-        return newNode;          // return the newNode 
-    }
-    
-        public void insertAfter(Node previous,int data){
-        if(previous==null) {
-            System.out.println("THe given previous node cannot be null");
-            return ;
-        }
-        Node newNode=new Node(data);
-        newNode.next=previous.next;
-         previous.next=newNode;
+        newNode.next=first;
+        first=newNode;
+        return newNode;
     }
 
-
-   public Node insertAtEnd(Node first , int data) {
+    public Node insertAtEnd(Node first , int data) {
         Node newNode = new Node(data);
         Node curr= first;
         while (curr.next!=null) {
             curr = curr.next;
         }
         curr.next=newNode ;
-        return curr;
+        return first;
+    }
+
+    public Node insertAfter(Node previous,int data){
+        if(previous==null) {
+            System.out.println("THe given previous node cannot be null");
+        }
+        Node newNode=new Node(data);
+        newNode.next=previous.next;
+         previous.next=newNode;
+         return previous;
     }
