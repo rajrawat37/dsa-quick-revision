@@ -7,11 +7,25 @@ public class LinkedList {
 
     public void display(Node first) {
         Node curr = first;
+        if(curr==null)
+            return;
         while (curr != null) {
             System.out.print(curr.data + "-->");
             curr = curr.next;
         }
-        System.out.print(curr);
+        System.out.println(curr);
+    }
+
+    public void length(Node first){
+        if(first==null)
+            System.out.println(0);
+        int count=0;
+        Node curr=first;
+        while(curr!=null){
+            count++;
+            curr=curr.next;
+        }
+        System.out.println(count);
     }
 
         private static class Node{
@@ -42,5 +56,6 @@ public class LinkedList {
 
         LinkedList obj1= new LinkedList();
         obj1.display(first);
+        obj1.length(first);
     }
 }
