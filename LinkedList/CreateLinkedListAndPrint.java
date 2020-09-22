@@ -5,8 +5,17 @@ import java.util.*;
 public class LinkedList {
     private Node head;
 
-    private static class Node{
-          private int data;
+    public void display(Node first) {
+        Node curr = first;
+        while (curr != null) {
+            System.out.print(curr.data + "-->");
+            curr = curr.next;
+        }
+        System.out.print(curr);
+    }
+
+        private static class Node{
+          private final int data;
            private Node next;
 
 
@@ -30,13 +39,8 @@ public class LinkedList {
         first.next=second;   // 10 --> 20
         second.next=third;   // 10 --> 20 --> 30
         third.next=fourth;   // 10 --> 20 --> 30 -->40
-   
-   //printing the linked list
-   
-     Node curr=first;
-     while(curr!=null){
-         System.out.print(curr.data+" ");
-         curr=curr.next;
-     }
+
+        LinkedList obj1= new LinkedList();
+        obj1.display(first);
     }
 }
