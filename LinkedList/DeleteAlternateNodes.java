@@ -2,7 +2,7 @@ public void deleteAlternate (Node head){
          Node prev=head;
          Node now=head.next;
           
-           while(prev!=null && now!=null){
+           while(now!=null){
                 prev.next=now.next;
                 now=null;
                 prev=prev.next;
