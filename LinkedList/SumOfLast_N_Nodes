@@ -1,0 +1,19 @@
+ public int sum(Node head, int k){
+      Node curr=head;
+      int len=0;
+      while(curr!=null){
+          len++;
+          curr=curr.next;
+    }
+    int check=len-k;
+    while(head!=null && check!=0){
+        check--;
+        head=head.next;
+    }
+    int sum=0;
+    while(head!=null){
+        sum+=head.data;
+        head=head.next;
+    }
+    return sum;
+    }
