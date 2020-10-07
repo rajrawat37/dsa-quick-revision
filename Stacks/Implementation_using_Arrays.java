@@ -1,36 +1,41 @@
   
   int []stack = new int[n];
   int top=0;
+
   public void push(int data){
-    stack[top]=data;
-    top++;
+    if(isFull())
+      System.out.println("-1");
+    else
+      stack[++top]=data;
     }
    
    
-  public int pop()
+public int pop()
    {
-    int data;
-    top--;
-    data=stack[top];
-    stack[top]=0;
-      return data;
+     if(isEmpty())
+	      return -1;
+	   else{
+       stack[top--];
+       stack[top]=0;
+     }
+ }
+   
+   
+public int peek()
+  {
+    return stack[top];
   }
    
-   
-  public int peek()
-   {
-    int data;
-    data=stack[top-1];
-      return data;
-  }
-   
-   public int size(){
+public int size(){
     return top;
     }
     
-    public boolean isEmpty(){
-     return top<=0;
+public boolean isEmpty(){
+     return top==-1;
      }
+public boolean isFull(){
+   return top==n-1;
+}
    
    public void display()
    {
