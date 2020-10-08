@@ -2,6 +2,8 @@
     {
            if(k==1)
              return null;
+           if(k==0)
+             return head;
            else{
                 int i=1;
                 Node temp=head;
