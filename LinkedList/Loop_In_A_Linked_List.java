@@ -13,7 +13,7 @@ public static boolean detectLoop(Node h){
 //Approach-2
 //Floyd's Cycle finding Algorithm
 
- public static boolean detectLoop(Node h){
+ public static boolean detectLoop(Node head){
       Node slow = head, fast = head; 
         int flag = 0; 
         while (slow != null && fast.next != null) { 
