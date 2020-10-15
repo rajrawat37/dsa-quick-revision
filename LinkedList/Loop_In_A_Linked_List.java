@@ -16,7 +16,7 @@ public static boolean detectLoop(Node h){
  public static boolean detectLoop(Node head){
       Node slow = head, fast = head; 
         int flag = 0; 
-        while (slow != null && fast.next != null) { 
+        while (slow != null && fast!=null && fast.next != null) { 
             slow = slow.next; 
             fast = fast.next.next; 
             if (slow == fast) { 
