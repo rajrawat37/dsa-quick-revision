@@ -27,3 +27,36 @@ LinkedList getIntersection(Node head1, Node head2)
         return result; 
     } 
   
+
+//My Approach
+
+ {
+       LinkedHashMap<Integer,Integer> map= new LinkedHashMap<>();
+        Node temp1=head1;
+        Node temp2=head2;
+        while(temp1!=null) {
+            if (!map.containsKey(temp1.data))
+                map.put(temp1.data, 1);
+            else
+                map.put(temp1.data, map.get(temp1.data) + 1);
+            temp1 = temp1.next;
+        }
+        while(temp2!=null){
+            if(!map.containsKey(temp2.data))
+                map.put(temp2.data, 1);
+            else
+                map.put(temp2.data,map.get(temp2.data)+1);
+            temp2=temp2.next;
+        }
+        Node res=new Node(0);
+        Node ans=res;
+        for( Map.Entry<Integer,Integer> i:map.entrySet()){
+            if(i.getValue()>1) {
+                res.next = new Node(i.getKey());
+                res = res.next;
+            }
+        }
+        res.next=null;
+        return ans.next;
+         
+    }
