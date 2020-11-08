@@ -1,4 +1,4 @@
-  int i=0;
+  int i=0 , k;
     public Stack<Integer> deleteMid(Stack<Integer>st,int n)
     {
         if(i==Math.floor(n/2)){
