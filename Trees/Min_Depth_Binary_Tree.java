@@ -1,4 +1,5 @@
-	int minDepth(Node root)
+//BFS	
+int minDepth(Node root)
 	{
 	   if(root==null)
 	     return 0;
