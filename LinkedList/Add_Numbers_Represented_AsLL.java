@@ -1,4 +1,10 @@
-    static Node addTwoLists(Node first, Node second){
+//N = 2
+//valueN[] = {4,5}
+//M = 3
+//valueM[] = {3,4,5}
+//Output: 3 9 0      
+
+static Node addTwoLists(Node first, Node second){
         
         Node head= new Node(0);
         Node res=head;
