@@ -35,3 +35,26 @@
         }
         return head;
     }
+
+
+
+//My Approach when studing code for 3rd time :)
+
+public Node removeDuplicates(Node head) 
+    {
+         HashSet<Integer> set= new  HashSet<>();
+         set.add(head.data);
+         Node temp=head.next ,prev=head;
+         while(temp!=null){
+             if(!set.contains(temp.data)){
+                 set.add(temp.data);
+                 prev.next=temp;
+                 prev=temp;
+             }
+             temp=temp.next;
+         }
+         prev.next=temp;
+         return head;
+    }
+//T.c = O(n)
+//S.C = O(n) ( As hashset is use to store nodes data )
