@@ -25,3 +25,43 @@
         }
         return res.next;  
    } 
+
+//My Approach
+
+Node mergeResult(Node node1, Node node2)
+    {
+	   node1=reverse(node1);
+	   node2=reverse(node2);
+	   
+	   Node temp=new Node(0);
+	   Node res=temp;
+ 
+	   while(node1!=null && node2!=null){
+	       if(node1.data>node2.data){
+	           temp.next=node1;
+	           node1=node1.next;
+	       }
+	       else{
+	           temp.next=node2;
+	           node2=node2.next;
+	       }
+	       temp=temp.next;
+	   }
+ 
+	   if(node1!=null) temp.next=node1;
+	   if(node2!=null) temp.next=node2;
+ 
+	   return res.next;
+    }
+    
+    Node reverse(Node head){
+        Node prev=null;
+        Node future=head;
+        while(head!=null){
+            future=head.next;
+            head.next=prev;
+            prev=head;
+            head=future;
+        }
+        return prev;
+    }
