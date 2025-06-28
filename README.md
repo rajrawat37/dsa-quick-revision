@@ -1,8 +1,12 @@
 # 🧠 Data Structures Revision
 
 This repository contains my personal notes, code snippets, and problem-solving practice for revising fundamental **Data Structures**.  
-Still in progress
+
+> 🚧 **Still in Progress**
+
 ---
+
+**Still in progress**
 
 ## 🚀 Topics Covered
 
@@ -36,12 +40,12 @@ Still in progress
 
 ```bash
 ds-revision/
-├── Arrays/
-├── Graphs/
-├── LinkedList/
-├── Queue/
-├── Sorting/
-├── Stacks/
-├── Strings/
-├── Trees/
+├── 📦 Arrays/
+├── 🧭 Graphs/
+├── 🔗 LinkedList/
+├── 🧺 Queue/
+├── 🧮 Sorting/
+├── 🧱 Stacks/
+├── 🔤 Strings/
+├── 🌳 Trees/
 └── README.md
