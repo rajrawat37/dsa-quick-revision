@@ -1,9 +1,10 @@
 /*
+
 - At Each level i have two choices , to pick current index or not pick
 - There will be a total of n levels
 - Time complexity would be total calls done in recursion
 - To find sum of all recursive calls for n=4, 
-    => 2+4+8+16 = 15+16 = (2^n + 2^n) - 1 => (2.2^n)-1 => (2^n+1 - 1) => ~ O(2^n)
+    => 1+2+4+8+16 = 15+16 = (2^n + 2^n) - 1 => (2.2^n)-1 => (2^n+1 - 1) => ~ O(2^n)
     => T.C = O(2^n)
 - Space Complexity = Auxillary space + Actual space
    => Auxillary space = O(n) : maximum depth a recursion stack can go.
