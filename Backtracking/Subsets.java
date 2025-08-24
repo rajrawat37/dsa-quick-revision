@@ -1,3 +1,4 @@
+/*
 - At Each level i have two choices , to pick current index or not pick
 - There will be a total of n levels
 - Time complexity would be total calls done in recursion
@@ -9,6 +10,7 @@
    => Actual space = 2^n subsets total, (2^n/2) are pairs => Each pair will have n characters => n*(2^n/2) => n*(2^(n-1)) => ~O(n.2^n)
    => S.C = O(n) + O(n.2^n) => O(n.2^n)
 
+*/
 
 // Subset - 1 (no duplicates)
   
